@@ -5,3 +5,4 @@
 
 ### 문제리스트
 - [2504:괄호의 값](https://github.com/hidekuma/backjoon-online-judge/tree/master/2504)
+- [10828:스택](https://github.com/hidekuma/backjoon-online-judge/tree/master/10828)
