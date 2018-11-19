@@ -4,6 +4,33 @@
 예를 들어서, 3이 들어오면 [0, 1, 1, 2, 3, 5]과 같은 피보나치 수열의 2번 index와 3번 index 값이 답이 된다.
 쓸데없는 연산은 줄이고 입력값이 커질때마다 그 증가수에 비례한 피보나치 수를 배열에 추가해 나가는 형식으로 코드를 짜면 해결할 수 있다.
 
+위 내용이 잘 이해가 안간다면, 다음 코드를 런해보면 된다.
+```python
+def fibonacci_cnt(n, zero=0, one=0):
+    if n == 0:
+        #print(0)
+        zero+=1
+        return 0, zero, one
+    elif n == 1:
+        #print(1)
+        one+=1
+        return 1, zero, one
+    else:
+        fib1 = fibonacci_cnt(n-1)
+        fib2 = fibonacci_cnt(n-2)
+        zero += fib1[1]+fib2[1]
+        one += fib1[2]+fib2[2]
+        return fib1[0]+fib2[0], zero, one
+
+inp = int(input())
+print('--run--')
+for _ in range(inp):
+    n = int(input())
+    rtn = fibonacci_cnt(n)
+    print('%s %s' % (rtn[1], rtn[2]))
+    print('-'*30)
+```
+
 ## 문제
 ### [1003: 피보나치 함수](https://www.acmicpc.net/problem/1003)
 다음 소스는 N번째 피보나치 수를 구하는 C++ 함수이다.
