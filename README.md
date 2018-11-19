@@ -1,5 +1,6 @@
-## Backjoon online judge
-백준알고리즘 문제풀이
+## Backjoon online judge with python
+파이썬으로 백준알고리즘 문제풀이
+열심히하자
 
 ---
 
